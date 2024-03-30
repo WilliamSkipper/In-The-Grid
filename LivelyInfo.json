@@ -4,9 +4,13 @@
   "Thumbnail": "pack_icon.png",
   "Desc": "Get Quotes, Clock, And Qr Code!",
   "Author": "William SKipper",
+  "License": null,
+  "Contact": null,
+  "Type": 1,
   "FileName": "index.html",
+  "Arguments": null,
   "IsAbsolutePath": false,
-  "Id": null,
+  "Id": 123,
   "Tags": null,
-  "Version": 0
+  "Version": 2
 }

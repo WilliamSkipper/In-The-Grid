@@ -7,10 +7,11 @@ var backgroundColor = getComputedStyle(document.documentElement)
 
 colorDark = color;
 colorLight = backgroundColor;
-displayQr(colorLight, colorDark);
+let url = "https://discord.com";
+
+displayQr(url, colorLight, colorDark);
 
 function livelyPropertyListener(name, val) {
-  document.getElementById("qrcode").innerHTML = "";
   switch (name) {
     case "hudColor":
       document.documentElement.style.setProperty("--color", val);
@@ -23,8 +24,12 @@ function livelyPropertyListener(name, val) {
       document.documentElement.style.setProperty("--backgroundColor", val);
       colorDark = val;
       break;
+    case "qrCode":
+      url = val;
+      break;
   }
-  displayQr(colorLight, colorDark);
+  document.getElementById("qrcode").innerHTML = "";
+  displayQr(url, colorLight, colorDark);
 }
 
 function displayDateTime() {
@@ -53,9 +58,9 @@ function displayDateTime() {
   document.getElementById("currentDay").innerHTML = day;
 }
 
-function displayQr(colorLight, colorDark) {
+function displayQr(url, colorLight, colorDark) {
   var qr = new QRCode(document.getElementById("qrcode"), {
-    text: "https://discord.com", // Provide the text or URL you want to encode
+    text: url, // Provide the text or URL you want to encode
     width: 128,
     height: 128,
     colorDark: colorLight,

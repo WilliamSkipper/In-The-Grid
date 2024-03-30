@@ -13,5 +13,10 @@
     "text": "Background Color",
     "type": "color",
     "value": "#000000"
+  },
+  "qrCode": {
+    "text": "Qr Code Link",
+    "type": "textbox",
+    "value": "https://discord.com"
   }
 }
