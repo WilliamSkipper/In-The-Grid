@@ -5,6 +5,11 @@
   --navColor: #494949;
 }
 
+@font-face {
+  font-family: Azonix;
+  src: url(fonts/Azonix.woff);
+}
+
 @keyframes showContainerCompartment {
   0% {
     display: none;
@@ -82,7 +87,7 @@
 
 body {
   margin: 0px;
-  font-family: "Azonix", sans-serif;
+  font-family: Azonix, sans-serif;
   background-color: var(--backgroundColor);
   user-select: none;
   align-items: center;
