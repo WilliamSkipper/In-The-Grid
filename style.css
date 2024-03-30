@@ -1,0 +1,233 @@
+:root {
+  --backgroundColor: #000000;
+  --color: #ffffff;
+  --hoverColor: #6b6b6b;
+  --navColor: #494949;
+}
+
+@keyframes showContainerCompartment {
+  0% {
+    display: none;
+  }
+
+  99% {
+    display: none;
+  }
+
+  100% {
+    display: flex;
+  }
+}
+
+@keyframes hidePasswordBox {
+  0% {
+    display: flex;
+  }
+
+  99% {
+    display: flex;
+  }
+
+  100% {
+    display: none;
+  }
+}
+
+@keyframes showPassword {
+  0% {
+    display: none;
+  }
+
+  99% {
+    display: flex;
+  }
+
+  100% {
+    display: flex;
+  }
+}
+
+.passwordContainer {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 35%;
+  width: 50%;
+  height: 20%;
+  border: 3px solid rgb(255, 255, 255);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  scale: 0.8;
+  animation-name: hidePasswordBox;
+  animation-duration: 10.1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.password {
+  font-size: 30px;
+  padding: 0 15px;
+}
+
+.containerCompartment {
+  height: 92%;
+  display: flex;
+  /* display: none; */
+  animation-name: showContainerCompartment;
+  animation-duration: 10.1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+body {
+  margin: 0px;
+  font-family: "Azonix", sans-serif;
+  background-color: var(--backgroundColor);
+  user-select: none;
+  align-items: center;
+  color: var(--color);
+  overflow: hidden;
+  padding: 20px;
+  text-align: center;
+}
+
+.center {
+  /* border: 5px solid; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+}
+
+#currentDay {
+  font-size: 60px;
+}
+
+#currentDate {
+  font-size: 24px;
+}
+
+#currentTime {
+  font-size: 16px;
+}
+
+.clockItem {
+  padding: 5px 0px;
+}
+
+.quoteContainer {
+  height: 32%;
+}
+
+.compartment {
+  margin: 2px;
+  padding: 20px;
+  border-radius: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--navColor);
+  height: 50vw;
+}
+
+.compartment:nth-child(1) {
+  padding: auto;
+  width: 100%;
+}
+
+.compartment:nth-child(2) {
+  padding: auto;
+  width: 100%;
+}
+
+/* .compartment:nth-child(1) {
+  height: 85%;
+} */
+
+/* .compartment:nth-child(1) {
+  height: 85%;
+} */
+
+.nav {
+  width: 100% -2px;
+  height: 20px;
+  background-color: var(--color);
+  border-radius: 0px 0px 50px 0px;
+  color: var(--navColor);
+  font-size: 20px;
+  padding: 10px;
+  margin-bottom: 50px;
+  border-style: solid;
+  border-color: var(--navColor);
+  border-width: 2px;
+  text-align: left;
+}
+
+#qrcode {
+  width: 100%;
+  height: 100%;
+}
+
+#sinceOpened {
+  font-size: 100px;
+}
+
+#quote {
+  text-align: left;
+}
+
+.phone {
+  transform: translateX(0%);
+  width: 100px;
+  height: 200px;
+  border-style: solid;
+  border-color: var(--color);
+  border-width: 2;
+  border-radius: 20px;
+  transition: all ease-in-out 0.3s;
+}
+
+.phone:hover {
+  transform: scale(1.2);
+  background-color: var(--hoverColor);
+}
+
+.notch {
+  width: 50px;
+  height: 10px;
+  border-style: solid;
+  border-color: var(--color);
+  border-width: 2;
+  border-top: 0px;
+  border-radius: 20px;
+  transform: translateX(40%);
+}
+
+.taskbar {
+  position: relative;
+  height: 15%;
+  width: 100%;
+  border-radius: 20px;
+  border-style: solid;
+  top: 40%;
+}
+
+.taskbarContainer {
+  top: 15%;
+  position: relative;
+  /* border: 5px solid pink; */
+}
+
+.author {
+  position: relative;
+  top: 50%;
+  left: unset;
+  text-align: left;
+}
+
+.taskbarContainer img {
+  padding: 0;
+  width: 15%;
+  height: auto;
+}

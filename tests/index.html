@@ -1,0 +1,44 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    /* The animation code */
+    @keyframes example {
+      0% {
+        background-color: red;
+      }
+      50% {
+        background-color: yellow;
+      }
+      51% {
+        background-color: blue;
+      }
+      100% {
+        background-color: green;
+      }
+    }
+
+    /* The element to apply the animation to */
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      animation-name: example;
+      animation-duration: 4s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+
+    .passwordContainer {
+        border: 2px white solid;
+    }
+  </style>
+  <body>
+    <div class="passwordContainer">
+        <h1 class="password">Password</h1>
+    </div>
+  </body>
+</html>

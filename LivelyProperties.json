@@ -1,0 +1,17 @@
+{
+  "hudColor": {
+    "text": "HUD Color",
+    "type": "color",
+    "value": "#ffffff"
+  },
+  "navColor": {
+    "text": "Nav Text Color",
+    "type": "color",
+    "value": "#494949"
+  },
+  "backgroundColor": {
+    "text": "Background Color",
+    "type": "color",
+    "value": "#000000"
+  }
+}
