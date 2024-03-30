@@ -10,76 +10,9 @@
   src: url(fonts/Azonix.woff);
 }
 
-@keyframes showContainerCompartment {
-  0% {
-    display: none;
-  }
-
-  99% {
-    display: none;
-  }
-
-  100% {
-    display: flex;
-  }
-}
-
-@keyframes hidePasswordBox {
-  0% {
-    display: flex;
-  }
-
-  99% {
-    display: flex;
-  }
-
-  100% {
-    display: none;
-  }
-}
-
-@keyframes showPassword {
-  0% {
-    display: none;
-  }
-
-  99% {
-    display: flex;
-  }
-
-  100% {
-    display: flex;
-  }
-}
-
-.passwordContainer {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 35%;
-  width: 50%;
-  height: 20%;
-  border: 3px solid rgb(255, 255, 255);
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  scale: 0.8;
-  animation-name: hidePasswordBox;
-  animation-duration: 10.1s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-.password {
-  font-size: 30px;
-  padding: 0 15px;
-}
-
 .containerCompartment {
   height: 92%;
   display: flex;
-  /* display: none; */
-  animation-name: showContainerCompartment;
   animation-duration: 10.1s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
