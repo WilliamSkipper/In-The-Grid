@@ -7,12 +7,12 @@
 
 @font-face {
   font-family: Azonix;
-  src: url(fonts/Azonix.woff);
+  src: url(../fonts/Azonix.woff);
 }
 
 .containerCompartment {
   height: 92%;
-  display: flex;
+  display: none;
   animation-duration: 10.1s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -123,38 +123,17 @@ body {
   border-color: var(--color);
   border-width: 2;
   border-radius: 20px;
-  transition: all ease-in-out 0.3s;
-}
-
-.phone:hover {
-  transform: scale(1.2);
-  background-color: var(--hoverColor);
 }
 
 .notch {
   width: 50px;
   height: 10px;
   border-style: solid;
-  border-color: var(--color);
   border-width: 2;
   border-top: 0px;
   border-radius: 20px;
   transform: translateX(40%);
-}
-
-.taskbar {
-  position: relative;
-  height: 15%;
-  width: 100%;
-  border-radius: 20px;
-  border-style: solid;
-  top: 40%;
-}
-
-.taskbarContainer {
-  top: 15%;
-  position: relative;
-  /* border: 5px solid pink; */
+  margin-bottom: 30px;
 }
 
 .author {
@@ -164,8 +143,201 @@ body {
   text-align: left;
 }
 
-.taskbarContainer img {
-  padding: 0;
-  width: 15%;
-  height: auto;
+.passwordBox {
+  width: 50%;
+  height: 40px;
+  font-size: 40px;
+  display: flex;
+  border: 3px solid white;
+  padding: 40px;
+  text-align: center;
+  justify-content: center;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.passwords {
+  display: flex;
+  justify-content: center;
+}
+.password {
+  padding: 0px 10px;
+  display: none;
+}
+
+.lockContainer {
+  margin-top: 10%;
+  background-color: transparent;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 10%;
+}
+
+.lockTop {
+  position: relative;
+  height: 80px;
+  width: 100px;
+  border-radius: 150px 150px 0 0;
+  transform: translateX(0%);
+  border: 10px solid white;
+  border-bottom: 0px;
+  display: inline-block;
+  /* vertical-align: middle; */
+}
+
+.lockBottom {
+  height: 80px;
+  width: 140px;
+  border: 10px solid white;
+}
+
+.passwordContainer {
+  padding: 70px 0;
+  text-align: center;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--backgroundColor);
+}
+
+.modal-content {
+  margin: auto;
+  padding: 20px;
+  width: 40%;
+  height: 90%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  scale: 1.5;
+  transition: all 0.3s ease-in-out;
+}
+
+.close:hover,
+.close:focus {
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+
+.phoneModal {
+  margin-top: 45%;
+  display: inline-block;
+  vertical-align: middle;
+  scale: 2.8;
+  width: 100px;
+  height: 200px;
+  border-style: solid;
+  border-color: var(--color);
+  border-width: 2;
+  border-radius: 20px;
+  background-color: transparent;
+  /* background-image: url("../images/download.jpg"); */
+  background-size: cover;
+}
+
+.notchModal {
+  width: 50px;
+  height: 10px;
+  border-style: solid;
+  border-width: 2;
+  border-top: 0px;
+  border-radius: 20px;
+  transform: translateX(40%);
+}
+
+.layer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 10px;
+}
+.app {
+  width: 35px;
+  font-size: 20px;
+  height: 35px;
+  border: white 1px solid;
+  border-radius: 25%;
+}
+
+#camera {
+}
+
+#settings {
+  line-height: 37px;
+}
+
+.centerCube {
+  width: 50%;
+  margin: auto;
+  margin-top: 30%;
+}
+
+.cube-container {
+  width: 15em;
+  height: 15em;
+  text-align: center;
+  perspective: 45em;
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  scale: 0.6;
+}
+
+.cube-side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.cube-side:nth-child(1) {
+  transform: rotateY(0deg) translateZ(7.5em);
+}
+.cube-side:nth-child(2) {
+  transform: rotateY(90deg) translateZ(7.5em);
+}
+.cube-side:nth-child(3) {
+  transform: rotateY(180deg) translateZ(7.5em);
+}
+.cube-side:nth-child(4) {
+  transform: rotateY(-90deg) translateZ(7.5em);
+}
+.cube-side:nth-child(5) {
+  transform: rotateX(-90deg) translateZ(7.5em);
+}
+.cube-side:nth-child(6) {
+  transform: rotateX(90deg) translateZ(7.5em);
+}
+
+/* Styles for phones only */
+@media only screen and (max-width: 600px) {
+  .compartment {
+    display: none;
+  }
+  .compartment:nth-child(2) {
+    overflow: visible;
+    display: block;
+    scale: 0.8;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-80px);
+  }
+
+  .centerCube {
+    width: 75%;
+  }
 }

@@ -1,0 +1,44 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background-color: black;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="cube-container">
+      <div class="cube" id="cube">
+        <div class="cube-side"></div>
+        <div class="cube-side"></div>
+        <div class="cube-side"></div>
+        <div class="cube-side"></div>
+        <div class="cube-side"></div>
+        <div class="cube-side"></div>
+      </div>
+    </div>
+    <script>
+      const cube = document.getElementById("cube");
+
+      let rotation = 0;
+      function rotateCube() {
+        rotation += 1;
+        cube.style.transform = `rotateX(-15deg) rotateY(${rotation}deg)`;
+        requestAnimationFrame(rotateCube);
+      }
+
+      rotateCube();
+    </script>
+  </body>
+</html>

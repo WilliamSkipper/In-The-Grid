@@ -3,11 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>In The Grid</title>
     <link rel="stylesheet" href="assets/styles/style.css" />
-  </head>
-  <body>
     <script src="assets/scripts/qrcode.js"></script>
+    <script src="assets/scripts/animate.js"></script>
+    <script src="assets/scripts/keybinds.js"></script>
+  </head>
+  <body id="test">
+    <div class="passwordContainer">
+      <div class="lockContainer">
+        <div class="lockTop"></div>
+        <div class="lockBottom"></div>
+      </div>
+      <br />
+      <div class="passwordBox">
+        <div class="passwords">
+          <div class="password">X</div>
+          <div class="password">X</div>
+          <div class="password">X</div>
+          <div class="password">X</div>
+          <div class="password">X</div>
+          <div class="password">X</div>
+        </div>
+      </div>
+    </div>
     <div class="containerCompartment">
       <div class="compartment">
         <div class="nav">Quotes</div>
@@ -18,13 +37,21 @@
       </div>
       <div class="compartment">
         <div class="nav">Clock</div>
-        <div class="clock">
+        <div class="clock" id="clock">
           <div class="clockItem" id="currentDay">Some Day</div>
           <div class="clockItem" id="currentDate">Some Date</div>
           <div class="clockItem" id="currentTime">Some Time</div>
         </div>
-        <div class="taskbar">
-          <div class="taskbarContainer">
+        <div class="centerCube">
+          <div class="cube-container">
+            <div class="cube" id="cube">
+              <div class="cube-side"></div>
+              <div class="cube-side"></div>
+              <div class="cube-side"></div>
+              <div class="cube-side"></div>
+              <div class="cube-side"></div>
+              <div class="cube-side"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -39,6 +66,27 @@
         <div class="nav">Phone</div>
         <div class="phone">
           <div class="notch"></div>
+        </div>
+      </div>
+      <div class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="phoneModal">
+            <div class="notch"></div>
+            <div class="layer">
+              <div class="app" id="camera">📸</div>
+              <div class="app" id="settings">⚙️</div>
+            </div>
+            <div class="layer">
+              <div class="app" id="files"></div>
+              <div class="app" id=""></div>
+            </div>
+            <div class="layer">
+              <div class="app" id="files"></div>
+              <div class="app" id=""></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
